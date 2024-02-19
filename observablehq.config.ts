@@ -20,15 +20,8 @@ export default {
   //   }
   // ],
 
-  head: `
-<script async src="https://www.googletagmanager.com/gtag/js?id=${process.env.GTAG_ID}"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', '${process.env.GTAG_ID}');
-</script>
-  `,
+  head: `<script async src="https://www.googletagmanager.com/gtag/js?id=${process.env.GTAG_ID}"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', '${process.env.GTAG_ID}');</script>`,
 
   // Some additional configuration options and their defaults:
   theme: "light", // try "light", "dark", "slate", etc.
