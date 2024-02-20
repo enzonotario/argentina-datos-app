@@ -21,7 +21,19 @@ export default {
   // ],
 
   head: `<script async src="https://www.googletagmanager.com/gtag/js?id=${process.env.GTAG_ID}"></script>
-<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', '${process.env.GTAG_ID}');</script>`,
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', '${process.env.GTAG_ID}');</script>
+<script src="https://cdn.jsdelivr.net/npm/@unocss/runtime"></script>
+`,
+
+  header: `<div class="flex items-center gap-2 p-2 font-sans font-semibold text-sm" style="border-bottom: 1px solid #e2e8f0;">
+    <a href="/" class="flex items-center gap-2 text-gray-800!" aria-label="Argentina Datos" title="Argentina Datos">
+      <img src="https://argentinadatos.com/assets/logo.png" class="w-8 h-8 rounded" alt="Argentina Datos" width="32" height="32">
+      <span>Argentina Datos</span>
+    </a>
+    <div class="flex-grow flex justify-end items-center text-xs">
+      <a href="https://github.com/enzonotario/argentina-datos-app" class="text-gray-600!" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><span>GitHub</span></a>
+    </div>
+  </div>`,
 
   // Some additional configuration options and their defaults:
   theme: "light", // try "light", "dark", "slate", etc.

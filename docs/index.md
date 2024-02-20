@@ -2,10 +2,6 @@
 toc: false
 ---
 
-```js
-import 'https://cdn.jsdelivr.net/npm/@unocss/runtime'
-```
-
 <div class="flex flex-col items-center justify-center text-center space-y-6 py-8">
   <h1 class="text-6xl font-bold">Argentina Datos</h1>
   <h2 class="text-2xl font-semibold not-italic">Visualizaciones de datos de Argentina</h2>
