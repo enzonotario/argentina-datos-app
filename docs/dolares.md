@@ -6,7 +6,6 @@ title: Dólares
 
 ```js
 import colors from 'npm:tailwind-colors'
-console.log({colors})
 ```
 
 ```js
@@ -33,7 +32,7 @@ const casaInput = Inputs.radio(Object.keys(candlesticksPorCasa), {value: 'blue',
 const casaSeleccionada = Generators.input(casaInput)
 
 const casasInput = Inputs.checkbox(Object.keys(candlesticksPorCasa), {
-    value: ['oficial', 'blue', 'contadoconliqui', 'bolsa'], 
+    value: ['oficial', 'blue', 'contadoconliqui', 'bolsa'],
     label: "Casas"
 })
 
@@ -41,8 +40,8 @@ const casasSeleccionadas = Generators.input(casasInput)
 ```
 
 ```js
-import { collect } from 'npm:collect.js'
-import { subDays, format } from 'npm:date-fns'
+import {collect} from 'npm:collect.js'
+import {subDays, format} from 'npm:date-fns'
 
 function mapDates(item) {
     return {
@@ -56,30 +55,29 @@ function chartHistorical({dolares}, {width}) {
         .when(periodoSeleccionado !== 'Todo', collection => collection.where('fecha', '>=', format(subDays(new Date(), periodos[periodoSeleccionado]), 'yyyy-MM-dd')))
         .whereIn('casa', casasSeleccionadas)
         .map(item => mapDates(item))
-    
-  return Plot.plot({
-    title: "Cotizaciones del Dólar en Argentina",
-    width,
-    height: 300,
-    y: {grid: true, label: "Cotización"},
-    marks: [
-      Plot.line(
-        collection.toArray(),
-        {x: "fecha", y: "venta", stroke: "casa", tip: "x"}
-      ),
-    ],
-  });
+
+    return Plot.plot({
+        title: "Cotizaciones del Dólar en Argentina",
+        width,
+        height: 300,
+        y: {grid: true, label: "Cotización"},
+        marks: [
+            Plot.line(
+                collection.toArray(),
+                {x: "fecha", y: "venta", stroke: "casa", tip: "x"}
+            ),
+        ],
+    });
 }
 ```
 
 ```js
-
 function chartCandlestick({casa}, {width}) {
     const collection = collect(casa && casa.candlesticks || [])
         .when(periodoSeleccionado !== 'Todo', collection => collection.where('fecha', '>=', format(subDays(new Date(), periodos[periodoSeleccionado]), 'yyyy-MM-dd')))
         .map(item => mapDates(item))
         .dump()
-    
+
     return Plot.plot({
         title: "Evolución del Dólar",
         inset: 6,
