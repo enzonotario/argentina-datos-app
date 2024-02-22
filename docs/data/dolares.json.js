@@ -1,11 +1,5 @@
-async function request(url) {
-	const response = await fetch(url);
-	if (!response.ok) throw new Error(`fetch failed: ${response.status}`);
-	return response.json();
-}
+import { useApi } from "./useApi.js";
 
-const dolares = await request(
-	"https://api.argentinadatos.com/v1/cotizaciones/dolares",
-);
+const dolares = await useApi().fetchJson("/v1/cotizaciones/dolares");
 
 process.stdout.write(JSON.stringify(dolares));
