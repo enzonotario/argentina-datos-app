@@ -10,15 +10,30 @@ export default {
 	// The pages and sections in the sidebar. If you don’t specify this option,
 	// all pages will be listed in alphabetical order. Listing pages explicitly
 	// lets you organize them into sections and have unlisted pages.
-	// pages: [
-	//   {
-	//     name: "Examples",
-	//     pages: [
-	//       {name: "Dashboard", path: "/example-dashboard"},
-	//       {name: "Report", path: "/example-report"}
-	//     ]
-	//   }
-	// ],
+	pages: [
+	  // {
+	  //   name: "Examples",
+	  //   pages: [
+	  //     {name: "Dashboard", path: "/example-dashboard"},
+	  //     {name: "Report", path: "/example-report"}
+	  //   ]
+	  // }
+
+		{
+			name: "Economía/Finanzas",
+			pages: [
+				{name: "Dólares", path: "/dolares"},
+				{name: "Economía", path: "/economia"},
+			]
+		},
+		{
+			name: "Política",
+			pages: [
+				{name: "Diputados", path: "/diputados"},
+				{name: "Senadores", path: "/senadores"}
+			]
+		}
+	],
 
 	head: `<script async src="https://www.googletagmanager.com/gtag/js?id=${process.env.GTAG_ID}"></script>
 <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', '${process.env.GTAG_ID}');</script>
