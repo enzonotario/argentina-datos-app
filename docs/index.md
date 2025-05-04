@@ -21,6 +21,10 @@ toc: false
     <h2 class="text-xl font-bold">Indicadores Económicos</h2>
     <p class="text-gray-600">Dashboard de inflación y otros indicadores económicos</p>
   </a>
+  <a href="/senadores" class="flex flex-col card hover:shadow-lg transition-shadow">
+    <h2 class="text-xl font-bold">Senadores</h2>
+    <p class="text-gray-600">Visualizaciones sobre la composición del Senado de la Nación</p>
+  </a>
 </div>
 
 [//]: # (<div class="grid grid-cols-2" style="grid-auto-rows: 504px;">)
