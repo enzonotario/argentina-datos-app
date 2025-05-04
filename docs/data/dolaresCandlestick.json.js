@@ -1,4 +1,4 @@
-import { collect } from "npm:collect.js";
+import { collect } from "collect.js";
 import { useApi } from "./useApi.js";
 
 const collection = collect(
