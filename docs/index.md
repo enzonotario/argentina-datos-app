@@ -6,12 +6,22 @@ toc: false
   <h1 class="text-6xl font-bold">Argentina Datos</h1>
   <h2 class="text-2xl font-semibold not-italic">Visualizaciones de datos de Argentina</h2>
   <p class="text-gray-600">
-    Trabajo en progreso. Pronto más visualizaciones.
+    Explora los datos de Argentina a través de visualizaciones interactivas.
     <br>
     Puedes colaborar en <a href="https://github.com/enzonotario/argentina-datos-app" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer" title="GitHub">GitHub</a>.
   </p>
 </div>
 
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+  <a href="/dolares" class="flex flex-col card hover:shadow-lg transition-shadow">
+    <h2 class="text-xl font-bold">Dólares</h2>
+    <p class="text-gray-600">Visualización de cotizaciones del dólar en Argentina</p>
+  </a>
+  <a href="/economia" class="flex flex-col card hover:shadow-lg transition-shadow">
+    <h2 class="text-xl font-bold">Indicadores Económicos</h2>
+    <p class="text-gray-600">Dashboard de inflación y otros indicadores económicos</p>
+  </a>
+</div>
 
 [//]: # (<div class="grid grid-cols-2" style="grid-auto-rows: 504px;">)
 
@@ -72,4 +82,3 @@ toc: false
 [//]: # (</div>)
 
 ---
-
