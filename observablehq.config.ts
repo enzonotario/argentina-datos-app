@@ -51,7 +51,7 @@ export default {
   </div>`,
 
 	// Some additional configuration options and their defaults:
-	theme: "light", // try "light", "dark", "slate", etc.
+	theme: ["light", "alt", "wide"], // try "light", "dark", "slate", etc.
 	// header: "", // what to show in the header (HTML)
 	footer:
 		"Hecho con <a href='https://observablehq.com/'>Observable</a>. Fuente: <a href='https://argentinadatos.com/'>ArgentinaDatos</a>.", // what to show in the footer (HTML)
