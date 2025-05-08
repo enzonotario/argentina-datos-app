@@ -5,12 +5,12 @@ title: Senadores
 # Senadores de Argentina
 
 ```js
-import {senadoresPartidoChart} from './components/senadoresPartidoChart.js'
-import {senadoresProvinciaChart} from './components/senadoresProvinciaChart.js'
-import {senadoresMatrizChart} from './components/senadoresMatrizChart.js'
+import {senadoresPartidoChart} from '../components/senadoresPartidoChart.js'
+import {senadoresProvinciaChart} from '../components/senadoresProvinciaChart.js'
+import {senadoresMatrizChart} from '../components/senadoresMatrizChart.js'
 ```
 
-## Distribución por Partido Político
+# Distribución por Partido Político
 
 <div class="card">
   <div class="w-full h-80">
@@ -18,7 +18,7 @@ import {senadoresMatrizChart} from './components/senadoresMatrizChart.js'
   </div>
 </div>
 
-## Distribución por Provincia
+# Distribución por Provincia
 
 <div class="card">
   <div class="w-full h-80">
@@ -26,7 +26,7 @@ import {senadoresMatrizChart} from './components/senadoresMatrizChart.js'
   </div>
 </div>
 
-## Senadores por Provincia y Partido
+# Senadores por Provincia y Partido
 
 <div class="card">
   <div class="w-full h-200">

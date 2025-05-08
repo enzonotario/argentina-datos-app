@@ -25,7 +25,7 @@ toc: false
     <h2 class="text-xl font-bold">Diputados</h2>
     <p class="text-gray-600">Visualizaciones sobre la composición de la Cámara de Diputados de la Nación</p>
   </a>
-  <a href="/senadores" class="flex flex-col card hover:shadow-lg transition-shadow">
+  <a href="/senadores/composicion" class="flex flex-col card hover:shadow-lg transition-shadow">
     <h2 class="text-xl font-bold">Senadores</h2>
     <p class="text-gray-600">Visualizaciones sobre la composición del Senado de la Nación</p>
   </a>
