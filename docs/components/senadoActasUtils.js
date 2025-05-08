@@ -17,12 +17,12 @@ export function normalizeText(text) {
 export const VOTE_TYPES = ['si', 'no', 'ausente', 'abstencion', 'no emite', 'desconocido'];
 
 export const VOTE_COLORS = {
-  si: colors.green[500],
-  no: colors.red[500],
-  ausente: colors.yellow[500],
-  abstencion: colors.blue[500],
-  'no emite': colors.gray[500],
-  desconocido: colors.purple[500],
+  si: colors.green[400],
+  no: colors.red[400],
+  ausente: colors.yellow[400],
+  abstencion: colors.blue[400],
+  'no emite': colors.gray[400],
+  desconocido: colors.purple[400],
 };
 
 export const VOTE_DISPLAY_NAMES = {
@@ -41,9 +41,9 @@ export const RESULTADO_DISPLAY_NAMES = {
 };
 
 export const RESULTADO_COLORS = {
-  afirmativa: colors.green[500],
-  negativa: colors.red[500],
-  'cancelada lev.vot.': colors.yellow[500],
+  afirmativa: colors.green[400],
+  negativa: colors.red[400],
+  'cancelada lev.vot.': colors.yellow[400],
 };
 
 export const PARTIDO_COLORS = [

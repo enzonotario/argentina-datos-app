@@ -27,40 +27,40 @@ export function senadoActasComparisonChart({ actaSeleccionado }, { width, height
     
     if (total === 0) return [];
     
-    return [
-      { 
-        partido, 
-        votoTipo: VOTE_DISPLAY_NAMES['si'], 
+    return ([
+      {
+        partido,
+        votoTipo: VOTE_DISPLAY_NAMES['si'],
         porcentaje: Math.round((partyVotes.filter(vote => vote.voto === 'si').length / total) * 100),
         cantidad: partyVotes.filter(vote => vote.voto === 'si').length,
         total
       },
-      { 
-        partido, 
-        votoTipo: VOTE_DISPLAY_NAMES['no'], 
+      {
+        partido,
+        votoTipo: VOTE_DISPLAY_NAMES['no'],
         porcentaje: Math.round((partyVotes.filter(vote => vote.voto === 'no').length / total) * 100),
         cantidad: partyVotes.filter(vote => vote.voto === 'no').length,
         total
       },
-      { 
-        partido, 
-        votoTipo: VOTE_DISPLAY_NAMES['abstencion'], 
+      {
+        partido,
+        votoTipo: VOTE_DISPLAY_NAMES['abstencion'],
         porcentaje: Math.round((partyVotes.filter(vote => vote.voto === 'abstencion').length / total) * 100),
         cantidad: partyVotes.filter(vote => vote.voto === 'abstencion').length,
         total
       },
-      { 
-        partido, 
-        votoTipo: VOTE_DISPLAY_NAMES['ausente'], 
+      {
+        partido,
+        votoTipo: VOTE_DISPLAY_NAMES['ausente'],
         porcentaje: Math.round((partyVotes.filter(vote => vote.voto === 'ausente').length / total) * 100),
         cantidad: partyVotes.filter(vote => vote.voto === 'ausente').length,
         total
       }
-    ];
+    ]).filter(d => d.porcentaje > 0);
   });
 
   const significantParties = parties.filter(partido =>
-    votesWithDetails.filter(vote => vote.partido === partido).length >= 2
+    votesWithDetails.filter(vote => vote.partido === partido).length
   );
   
   const filteredData = comparisonData.filter(d => significantParties.includes(d.partido));
@@ -92,15 +92,13 @@ export function senadoActasComparisonChart({ actaSeleccionado }, { width, height
         fill: 'votoTipo',
         tip: true,
         title: d => `${d.partido}\n${d.votoTipo}: ${d.cantidad} de ${d.total} (${d.porcentaje}%)`,
-        sort: { y: '-x' }
+        sort: { y: '-x' },
       }),
       Plot.text(filteredData.filter(d => d.porcentaje >= 10), {
         x: d => d.porcentaje,
         y: 'partido',
         text: d => `${d.porcentaje}%`,
-        fill: 'white',
         fontWeight: 'bold',
-        dx: -15,
         filter: d => d.porcentaje >= 15
       })
     ],
