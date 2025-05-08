@@ -9,7 +9,7 @@ const actasForTable = actas.reverse().map((acta) => ({
   ID: acta.actaId,
   Fecha: acta.fecha ? format(parseISO(acta.fecha), 'dd/MM/yyyy HH:mm') : '',
   Resultado: acta.resultado,
-  Título: acta.titulo || 'Desconocido'
+  Título: acta.titulo || 'Sin título',
 }));
 
 export const actaInput = Inputs.table(actasForTable, {
@@ -24,6 +24,7 @@ export const actaInput = Inputs.table(actasForTable, {
   width: {
     ID: 40,
     Fecha: 80,
+    Resultado: 80,
   },
   height: Math.min(actasForTable.length * 23.5, 300),
   rows: Math.min(actasForTable.length, 10),
