@@ -51,6 +51,7 @@ export function chartHistorical({ periodo, casas }, { width, height }) {
       collection.where('fecha', '>=', format(subDays(new Date(), periodos[periodo]), 'yyyy-MM-dd')),
     )
     .whereIn('casa', casas)
+    .sortBy('fecha')
     .map((item) => mapDates(item))
     .toArray();
 
@@ -77,6 +78,7 @@ export function chartCandlestick({ periodo, casa }, { width, height }) {
     .when(periodo !== 'Todo', (collection) =>
       collection.where('fecha', '>=', format(subDays(new Date(), periodos[periodo]), 'yyyy-MM-dd')),
     )
+    .sortBy('fecha')
     .map((item) => mapDates(item))
     .toArray();
 
